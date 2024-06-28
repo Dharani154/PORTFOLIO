@@ -103,6 +103,25 @@ section
     margin: 0 auto;
 }
 
+* {
+    box-sizing: border-box;
+  }
+  
+  .box {
+    box-shadow: yellow;
+    color: #000;
+    float: left;
+    width: 100%;
+    padding: 70px;
+    height: 520px;
+  }
+  
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
 /* The below code is for table */
 table {
     width: 100%;
@@ -153,7 +172,7 @@ th, td {
     display: inline-block;
     text-align: left;
     padding: 100px;
-    border: 7px solid #000;
+    border: 1px solid #000;
     border-radius: 40px;
     margin: 20px auto;
     background-color: #f9f9f9;
@@ -162,7 +181,7 @@ th, td {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 40px;
+    padding: 8px 10px;
     
 }
 .contact-form-container div {
