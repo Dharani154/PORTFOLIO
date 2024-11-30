@@ -4,6 +4,18 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "ysfDfZR-K4OyV4UZ7",
+      });
+   })();
+</script>
+<script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -123,22 +135,23 @@
             </tr>
         </table>
     </section>
-
-    <section id="projects" >
+<br>
+    <section id="projects" style="text-align: center; padding: 20px;">
         <h2>Projects</h2>
-          <div class="project-box">
-            <p><a href="https://github.com/Dharani154/Telecommunication" target="_blank">Telecommunication System</a></p>
+        <div class="projects-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <div class="project-box" style="background-color: #f3f3f3; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <p><a href="https://github.com/Dharani154/Telecommunication" target="_blank" style="text-decoration: none; color: #007bff; font-weight: bold;">Telecommunication System</a></p>
             </div>
-            <div class="project-box">
-                <p><a href="https://github.com/Dharani154/Med-Care" target="_blank">Med-Care Management System</a></p>
-
+            <div class="project-box" style="background-color: #f3f3f3; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <p><a href="https://github.com/Dharani154/Med-Care" target="_blank" style="text-decoration: none; color: #007bff; font-weight: bold;">Med-Care Management System</a></p>
             </div>
-           
-
-
+            <div class="project-box" style="background-color: #f3f3f3; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <p><a href="https://github.com/Dharani154/Estate-Website" target="_blank" style="text-decoration: none; color: #007bff; font-weight: bold;">Real Estate Website</a></p>
+            </div>
+            
         </div>
-        
     </section>
+    
 
     <section id="contact" >
         <div style="text-align: left;box-sizing: content-box;">
@@ -163,11 +176,11 @@
                         <input type="email" id="email" name="email" required><br><br>
                     </div>
                     <div>
-                        <label for="comments">Comments:</label>
-                        <textarea id="comments" name="comments" rows="4" required></textarea>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
                     </div>
                     <div>
-                        <button type="submit">Send</button>
+                        <button type="submit" onclick="sendMail()">Send</button>
                     </div>
                 </form>
             </div>
